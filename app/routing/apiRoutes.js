@@ -1,41 +1,44 @@
-var express = require('express');
-var path = require('path');
+// The apiRoutes.js file includes two basic routes for app.get function and app.post function which used for displaying a 
+//JSON data and incoming survey results of all possible friends:
+// The app.post(in the apiRoutes.js) used to handle the compatibility logic.
 
-var friends = require("../data/friends");
-//   * A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
-module.exports = funtion(app){
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
+var friends = require("../data/friends.js");
+
+// Routing the apiRoutes with the app.get and app.post functions
+
+module.exports = function(app){
 
   app.get("/api/friends", function(req, res) {
-    res.json(tableData);
+    res.json(friends);
   });
-
-  // API POST Requests
-  // Below code handles when a user submits a form and thus submits data to the server.
-  // In each of the below cases, when a user submits form data (a JSON object)
-  // ...the JSON is pushed to the appropriate JavaScript array
-  // (ex. User fills out a survey... this data is then sent to the server...
-  // Then the server saves the data to the friends array)
-  // ---------------------------------------------------------------------------
-
-  // * A POST routes `/api/friends`. This will be used to handle incoming survey results. 
-  // This route will also be used to handle the compatibility logic.
+    // The app.post request handles when a user submits a form and thus submits data to the surver
 
   app.post("/api/friends", function(req, res) {
-    if (friends.length < 5) {
-      friends.push(req.body);
-      res.json(true);
-    }
-    else {
-    res.json(false);
-    }
+ // loop through all of the possible options
+
+        // To take the result of the user's survey POST and parse it
+
+        // To take the results of the user's name and photo, other than the survey questions, to post and parse it
+
+        // The variable used to calculate the difference b/n the user's socres and the scores of each user
+
+        //loop through the friends data array of objects to get each friends scores
+
+        //loop through that friends score and the users score and calculate the absolute difference between the two and push that to the total difference variable set above
+
+        // We calculate the difference between the scores and sum them into the totalDifference
+
+        // If the sum of differences is less then the differences of the current "best match"
+
+        // Reset the bestMatch to be the new friend. 
+
+        // The push method use to save user's data to the database
+
+        //The res.json method will return a JSON data with the user's match which was looped through frieds data array. 
+
+
   });
 };
-
 
 
 
