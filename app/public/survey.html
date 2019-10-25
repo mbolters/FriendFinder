@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Reservation Page</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservation Page</title>
 
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href= "style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -24,11 +27,9 @@
       <h2 class="text-center">One step closer to Besties! Answer these questions...</h2>
       <br>
       <div class="text-center">
-        <a href="/survey">
           <button class="btn btn-lg btn-primary">
             <span class="fa fa-list-alt"></span> </button>
         </a>
-        <a href="/">
           <button class="btn btn-lg btn-default">
             <span class="fa fa-home"></span>
           </button>
@@ -38,6 +39,7 @@
     <div class="row">
       <div class="col-lg-12">
         <!-- Reservation Page -->
+        
         <div class="card">
           <div class="card-header">
             Table Reservation
@@ -45,25 +47,52 @@
           <div class="card-body">
             <form role="form">
               <div class="form-group">
-                <label for="reserve-name">Name</label>
+                <label for="reserve-name">Name (Required)</label>
                 <input type="text" class="form-control" id="reserve-name">
               </div>
               <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
+                <label for="reserve-phone">Link to photo (Required)</label>
                 <input type="text" class="form-control" id="reserve-phone">
               </div>
-              <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="reserve-email">
-              </div>
-              <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="reserve-unique-id">
-              </div>
+
+              <div class="container-fluid bg-info">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                         <div class="modal-header">
+                            <h3><span class="label label-warning" id="qid"></span> What is your favorite color?</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-xs-3 col-xs-offset-5">
+                               <div id="loadbar" style="display: none;">
+                                  <div class="blockG" id="rotateG_01"></div>
+                                  <div class="blockG" id="rotateG_02"></div>
+                                  <div class="blockG" id="rotateG_03"></div>
+                                  <div class="blockG" id="rotateG_04"></div>
+                                  <div class="blockG" id="rotateG_05"></div>
+                                  <div class="blockG" id="rotateG_06"></div>
+                                  <div class="blockG" id="rotateG_07"></div>
+                                  <div class="blockG" id="rotateG_08"></div>
+                              </div>
+                          </div>
+                
+                          <div class="quiz" id="quiz" data-toggle="buttons">
+                           <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1"> Blue</label>
+                           <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2"> Red</label>
+                           <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3"> Purple</label>
+                           <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4"> Green</label>
+                       </div>
+                   </div>
+                   <div class="modal-footer text-muted">
+                    <span id="answer"></span>
+                </div>
+                </div>
+                </div>
+                </div>
               <button type="submit" class="btn btn-primary submit">Submit</button>
             </form>
           </div>
         </div>
+        
       </div>
     </div>
 
@@ -77,6 +106,7 @@
     </footer>
 
   </div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
 
@@ -129,5 +159,35 @@
       });
 
   });
+  $(function(){
+    var loading = $('#loadbar').hide();
+    $(document)
+    .ajaxStart(function () {
+        loading.show();
+    }).ajaxStop(function () {
+    	loading.hide();
+    });
+    
+    $("label.btn").on('click',function () {
+    	var choice = $(this).find('input:radio').val();
+    	$('#loadbar').show();
+    	$('#quiz').fadeOut();
+    	setTimeout(function(){
+           $( "#answer" ).html(  $(this).checking(choice) );      
+            $('#quiz').show();
+            $('#loadbar').fadeOut();
+           /* something else */
+    	}, 1500);
+    });
+
+    $ans = 3;
+
+    $.fn.checking = function(ck) {
+        if (ck != $ans)
+            return 'INCORRECT';
+        else 
+            return 'CORRECT';
+    }; 
+});	
 
 </script>
