@@ -1,6 +1,6 @@
-const friends = {
+const friends = [{
     "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://i.pinimg.com/736x/2e/0a/f8/2e0af89dac4dbf2aae5bbca791adb4c6.jpg",
     "scores":[
         5,
         1,
@@ -13,6 +13,39 @@ const friends = {
         4,
         1
       ]
-  }
+  },
+  {
+    "name":"Mary",
+    "photo":"https://2arwdp1dlwob2ihy4u33bv5f-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/headshots-chicago-18.jpg",
+    "scores":[
+        5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        1,
+        2,
+        3,
+        4
+      ]
+  },
+  {
+    "name":"Drew",
+    "photo":"https://cdn.lynda.com/course/659289/659289-636524858527457738-16x9.jpg",
+    "scores":[
+        4,
+        3,
+        2,
+        1,
+        5,
+        4,
+        4,
+        3,
+        2,
+        1
+      ]
+  }];
+  
 
   module.exports = friends;
