@@ -9,7 +9,7 @@ var friendList = require("../data/friends");
 module.exports = function(app){
 
   app.get("/api/friends", function(req, res) {
-    res.json(newFriend);
+    res.json(friendList);
   });
     // The app.post request handles when a user submits a form and thus submits data to the surver
 
