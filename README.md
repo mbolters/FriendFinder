@@ -1,6 +1,6 @@
 # FriendFinder
 
-### Heroku Link: 
+## Heroku Link: 
 
 ## Overview
 In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
@@ -83,8 +83,9 @@ In this activity, you'll build a compatibility-based "FriendFinder" application 
    * The modal should display both the name and picture of the closest match.
 
 ## Image of landing page
-image
+![alt text](https://github.com/mbolters/FriendFinder/blob/master/app/public/images/Screen%20Shot%202019-10-26%20at%209.47.44%20PM.png)
+
 
 ## Image of Survey
-image
+![alt text](https://github.com/mbolters/FriendFinder/blob/master/app/public/images/Screen%20Shot%202019-10-26%20at%209.48.16%20PM.png)
 
