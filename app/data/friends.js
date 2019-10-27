@@ -1,6 +1,6 @@
 const friendList = [{
     "name":"Ahmed",
-    "photo":"http://davidlaporte.com/wp-content/uploads/2017/10/theatrical-actor-headshot-west-la-copy-3-1.jpg",
+    "photo":"https://cdn.lynda.com/course/659289/659289-636524858527457738-16x9.jpg",
     "scores":[
         5,
         1,
@@ -16,7 +16,7 @@ const friendList = [{
   },
   {
     "name":"Mary",
-    "photo":"https://2arwdp1dlwob2ihy4u33bv5f-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/headshots-chicago-18.jpg",
+    "photo":"https://cdn.lynda.com/course/659289/659289-636524858527457738-16x9.jpg",
     "scores":[
         5,
         1,
