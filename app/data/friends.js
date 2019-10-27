@@ -1,4 +1,4 @@
-const friends = [{
+const friendList = [{
     "name":"Ahmed",
     "photo":"https://i.pinimg.com/736x/2e/0a/f8/2e0af89dac4dbf2aae5bbca791adb4c6.jpg",
     "scores":[
@@ -48,4 +48,4 @@ const friends = [{
   }];
   
 
-  module.exports = friends;
+  module.exports = friendList;
