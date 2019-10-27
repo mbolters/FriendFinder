@@ -1,6 +1,6 @@
 const friendList = [{
     "name":"Ahmed",
-    "photo":"https://cdn.lynda.com/course/659289/659289-636524858527457738-16x9.jpg",
+    "photo":"https://i.pinimg.com/736x/2e/0a/f8/2e0af89dac4dbf2aae5bbca791adb4c6.jpg",
     "scores":[
         5,
         1,
@@ -16,7 +16,7 @@ const friendList = [{
   },
   {
     "name":"Mary",
-    "photo":"https://cdn.lynda.com/course/659289/659289-636524858527457738-16x9.jpg",
+    "photo":"http://www.minneapolisheadshots.com/gallery/main/environmentalheadshot.jpg",
     "scores":[
         5,
         1,
