@@ -2,7 +2,7 @@
 //JSON data and incoming survey results of all possible friends:
 // The app.post(in the apiRoutes.js) used to handle the compatibility logic.
 
-var friendList = require("../data/friends.js");
+var friendList = require("../data/friends");
 
 // Routing the apiRoutes with the app.get and app.post functions
 
