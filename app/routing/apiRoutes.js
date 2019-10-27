@@ -40,8 +40,18 @@ module.exports = function(app){
     }
 
     //return bestMatch data
+    console.log(friendList[bestMatch]);
+    console.log(friendList[bestMatch].name);
+    console.log(friendList[bestMatch].photo);
+
     var bff = friendList[bestMatch];
+    console.log(bff);
+    console.log(bff.name);
+    console.log(bff.photo);
     res.json(bff);
+    
+    console.log(res);
+
 
     //pushes new submission into the friendsList array
     friendList.push(req.body);
