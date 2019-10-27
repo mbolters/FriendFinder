@@ -30,7 +30,7 @@
       <h2 class="text-center">One step closer to Besties! Answer these questions...</h2>
       <br>
       <div class="text-center">
-        <a href="./../public/index.html">
+        <a href="../public/index.html">
           <button class="btn btn-lg btn-default cyan">
             <span class="fa fa-home"></span>
           </button>
@@ -194,7 +194,7 @@
     <div class="modal-content">
         <h4>Meet Your New BFF</h4>
         <h5 id="matchName"></h5>
-        <img id="matchPic" src="" alt="No Image" width = 250px>
+        <img id="matchPic" href="" alt="No Image" width = 250px>
     </div>
     <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
@@ -247,7 +247,7 @@ $(document).ready(function() {
             console.log(data);
               //Grab the result from the AJAX post so that the best match's name and photo are displayed.
               $("#matchName").text(data.name);
-              $("#matchPic").attr("src", data.photo);
+              $("#matchPic").attr("href", data.photo);
 
           });
           // Show the modal with the best match
