@@ -1,6 +1,6 @@
 const friendList = [{
     "name":"Ahmed",
-    "photo":"https://i.pinimg.com/736x/2e/0a/f8/2e0af89dac4dbf2aae5bbca791adb4c6.jpg",
+    "photo":"http://davidlaporte.com/wp-content/uploads/2017/10/theatrical-actor-headshot-west-la-copy-3-1.jpg",
     "scores":[
         5,
         1,
